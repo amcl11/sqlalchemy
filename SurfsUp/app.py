@@ -44,8 +44,7 @@ def precipitation():
     one_year_ago = dt.date(2016, 8, 23)
     
     #Return precipitation data
-    prcp_results = session.query(Measurement.date, Measurement.prcp).\
-        filter(Measurement.date >= one_year_ago).all()
+    prcp_results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= one_year_ago).all()
     
     #close session request
     session.close()
